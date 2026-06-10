@@ -1,0 +1,48 @@
+:root {
+  --bg: #0a0e17;
+  --bg2: #0f1520;
+  --bg3: #151d2e;
+  --border: #1e2d45;
+  --accent: #00c4a0;
+  --accent2: #0077ff;
+  --accent3: #ff6b35;
+  --warn: #f5a623;
+  --danger: #e84040;
+  --text: #e8edf5;
+  --text2: #8a9bb5;
+  --text3: #4d6080;
+  --mono: 'Space Mono', monospace;
+  --sans: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+button { cursor: pointer; border: none; font-family: var(--sans); }
+input, textarea { font-family: var(--sans); }
+
+.mono { font-family: var(--mono); }
+
+/* Grid noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0,196,160,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0,119,255,0.03) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
