@@ -31,7 +31,7 @@ cd soti-v2.0
 npm install
 
 # 3. Iniciar el sistema
-npm start
+npm run dev
 ```
 
 Abrir en el navegador → **http://localhost:5173**
@@ -117,7 +117,7 @@ SOTI funciona completamente offline:
 
 Para IA real (TerritoryGPT con Claude):
 ```bash
-ANTHROPIC_API_KEY=tu_clave npm start
+ANTHROPIC_API_KEY=tu_clave npm run dev
 ```
 
 ---
@@ -142,7 +142,7 @@ Respuesta esperada:
 # macOS / Linux
 lsof -ti:3001 | xargs kill -9
 lsof -ti:5173 | xargs kill -9
-npm start
+npm run dev
 
 # Windows (PowerShell)
 netstat -ano | findstr :3001
@@ -158,7 +158,7 @@ npm install
 **Node.js versión incorrecta (con nvm):**
 ```bash
 nvm use    # usa la versión de .nvmrc (v20)
-npm start
+npm run dev
 ```
 
 ---
